@@ -5,23 +5,23 @@
 class Rig < Formula
   desc "The most beautiful terminal radio CLI"
   homepage "https://github.com/MWhyte/rig"
-  version "0.1.0"
+  version "0.2.0"
   license "AGPL-3.0-only"
 
   depends_on "mpv"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/MWhyte/rig/releases/download/v0.1.0/rig_darwin_amd64.tar.gz"
-      sha256 "a2a0ead7c59ca865b4b2b5a0c9b1621fe5e2c9fa7012f0e3ef90d4b4cf91384a"
+      url "https://github.com/MWhyte/rig/releases/download/v0.2.0/rig_darwin_amd64.tar.gz"
+      sha256 "3437844a40d9aacce640ca5517ceddde71e972721ca44705dea350445537fbeb"
 
       define_method(:install) do
         bin.install "rig"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/MWhyte/rig/releases/download/v0.1.0/rig_darwin_arm64.tar.gz"
-      sha256 "bd2ad86eba30fe12cef7bb4d900c0673ddb68489e85a0bbf8a933a4a6a5ec0bb"
+      url "https://github.com/MWhyte/rig/releases/download/v0.2.0/rig_darwin_arm64.tar.gz"
+      sha256 "7fcd08459f64a42b64d2cd008d63a721e17b3a89e6a5cc035a84b0aa9d1f1d72"
 
       define_method(:install) do
         bin.install "rig"
@@ -31,15 +31,15 @@ class Rig < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/MWhyte/rig/releases/download/v0.1.0/rig_linux_amd64.tar.gz"
-      sha256 "3aae9736e007556b5166cb7fa0275b32bcd4e5c5085d6a5afa21baab0d29251f"
+      url "https://github.com/MWhyte/rig/releases/download/v0.2.0/rig_linux_amd64.tar.gz"
+      sha256 "2fea46a79f8c88a063603c5850d293da96cf9c0468c26e2db07b0f4d524d45fc"
       define_method(:install) do
         bin.install "rig"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/MWhyte/rig/releases/download/v0.1.0/rig_linux_arm64.tar.gz"
-      sha256 "7f177f8038cf360849be631b85a6a1d2290ab01b423b3760fe4587e8c1751cca"
+      url "https://github.com/MWhyte/rig/releases/download/v0.2.0/rig_linux_arm64.tar.gz"
+      sha256 "355df69be61b6ade3d12e5003fe6f1377a2cf781c1252b0e1f49a9f8e517fec8"
       define_method(:install) do
         bin.install "rig"
       end
